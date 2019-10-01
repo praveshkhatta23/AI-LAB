@@ -1,0 +1,67 @@
+#TUPLES
+days=("Mon","Tue","Wed","Thu","Fri","Sat","Sun")
+print(days[2])
+print(days[1:4])
+singleElem=(1)
+print(type(singleElem))
+singleElemTup=(1,)
+print(type(singleElemTup))
+#SETS
+setA={0,1,2,3,4,5,6}
+print(setA)
+setB=set("HELLO")
+print(setB)
+setC={3,4,5,6,7,8,9}
+print(setA.union(setC))
+print(setA.intersection(setC))
+setA.update(setC)
+print(setA)
+setA={0,1,2,3,4,5,6}
+setD={6,7,8,9}
+print(setA-setD)
+print(setC-setD)
+setE={1,2,3}
+setF={1,1,2,2,3,3}
+print(setE==setF)
+print(setA.symmetric_difference(setC))
+print(setE.issubset(setA))
+setA.add("WOAH")
+print(setA)
+try:
+    setA.remove("item")
+except:
+    print("Error: no item with the specified key exists")
+setA.discard("item")
+#DICTIONARIES
+dict1={1:"Mercury",2:"Venus",3:"Earth",4:"Mars"}
+print(dict1)
+print(dict1.keys())
+print(dict1.values())
+print(dict1.items())
+dict1[5]="Jupiter"
+print(dict1)
+dict1.get(6)
+dict1.pop(5)
+print(dict1)
+dict2={"Weekdays":{
+        1:"Mon",
+        2:"Tue",
+        3:"Wed"
+        },"Months":{
+                1:"Jan",
+                2:"Feb",
+                3:"March"   
+                },"Planets":{
+                        1:"Mercury",
+                        2:"Venus",
+                        3:"Earth"
+                        }}
+print(dict2["Weekdays"][1],dict2["Months"][1],dict2["Planets"][1])
+dict2.clear()
+print(dict2)
+del dict2
+try:
+    print(dict2)
+except:
+    print("NameError: name 'dict2' is not defined")
+print("hello")
